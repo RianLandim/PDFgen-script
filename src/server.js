@@ -5,14 +5,14 @@ const passengers = require("./util/const");
 
 const options = { format: "letter" };
 
-passengers.forEach((passengers) => {
+passengers.forEach((passenger) => {
   const filePath = path.join(__dirname, "screen", "template.ejs");
   const pdfPath = path.join(__dirname, "pdf", "/");
 
   ejs.renderFile(filePath, { passengers }, (err, html) => {
     if (err) return console.log(err);
     pdf.create(html, options)
-      .toFile(pdfPath + passengers.name + ".pdf", function (err, res) {
+      .toFile(pdfPath + passenger.name + ".pdf", function (err, res) {
         if (err) return console.log("Erro ao gerar o PDF!");
         console.log(res);
       });
