@@ -8,6 +8,7 @@
     "html-pdf": "^3.0.1"
   },
   "devDependencies": {
-    "chart.js": "^3.5.1"
+    "chart.js": "^3.5.1",
+    "eslint": "^7.32.0"
   }
 }
